@@ -1,0 +1,9 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pandas>=2.2
+streamlit>=1.38
+requests>=2.32
+pytest>=8.0
+python-multipart>=0.0.9
+openai>=1.40
+httpx

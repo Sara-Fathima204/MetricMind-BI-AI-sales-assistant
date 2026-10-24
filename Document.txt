@@ -1,0 +1,49 @@
+# AI-Assisted Development Notes
+## RSG Sales Intelligence Assistant
+
+### 1. AI Tools Used
+I used ChatGPT as an AI-assisted development tool while building the RSG Sales Intelligence Assistant and also I used Claude AI for more details in the analysis of the project.
+
+### 2. How AI Was Used
+
+I used AI assistance to understand the project requirements, organize the application architecture, develop and review parts of the Python implementation, improve natural-language question classification, and prepare automated tests.
+
+AI assistance also helped me understand how to connect the FastAPI backend to the Streamlit interface, use SQLite for sales aggregations, and document the application's setup and execution.
+
+I reviewed the suggested changes and tested the application locally rather than treating generated code as automatically correct.
+
+### 3. Problems Encountered
+
+During development, I encountered several issues:
+
+- Some CSV records contained invalid or missing values and needed to be rejected without silently losing information.
+- Some natural-language questions were classified into the wrong analytical intent or returned broader results than requested.
+- New analytics features required corresponding backend logic and test cases.
+- Test cases initially exposed missing analytics behavior, including the total-discount calculation.
+- FastAPI displayed deprecation warnings related to the startup-event API.
+
+### 4. Debugging and Verification
+
+I debugged the application incrementally by inspecting the relevant Python functions, modifying targeted code sections, and rerunning the automated test suite.
+
+I added or updated tests for transaction counts, total discounts, average revenue, category classification, channel classification, CSV loading, and rejected records.
+
+The latest recorded test run completed with 14 tests passing and no failures. I also used the FastAPI documentation interface to prepare manual checks of API behavior.
+
+I learned that a passing classifier test does not necessarily prove that the final analytics response is correct, so channel-specific filtering and other end-to-end behavior require separate verification.
+
+### 5. What I Would Improve With Another Day
+
+With another day of development, I would prioritize:
+
+1. Expand automated tests for channel-specific filtering, month comparisons, and unsupported or ambiguous questions.
+2. Improve intent classification so that requested filters and parameters are preserved consistently in local-rule and LLM-enabled modes.
+3. Replace the deprecated FastAPI startup-event handler with a lifespan handler.
+4. Add more robust logging and clearer error messages for malformed CSV files and database failures.
+5. Improve the interface with result exports, additional visualizations, and more flexible date filters.
+6. Add GitHub Actions to automatically run the test suite on each push.
+7. Review the application against the evaluator's requirements and validate its behavior using the original supplied dataset.
+
+### 6. Lessons Learned
+
+This project helped me understand how to build a small analytics application using a REST API, relational database queries, CSV validation, and an interactive dashboard. It also reinforced the importance of testing AI-assisted code, validating assumptions, and ensuring that business questions are answered using traceable calculations.
