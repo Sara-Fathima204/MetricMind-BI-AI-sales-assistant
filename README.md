@@ -227,18 +227,6 @@ Re-run the tests after any code changes and report the latest result when submit
 - Channel-specific filtering should be verified in both local-rule and LLM-enabled modes.
 - The current implementation reloads the configured CSV at startup, replacing the existing sales and rejected-row data.
 - Future improvements could include exporting results to CSV or Excel, more flexible date filters, improved query classification, structured logging, CI with GitHub Actions, and deployment.
-
-## AI-Assisted Development Disclosure
-
-Complete this section honestly before submission.
-
-- **AI tools used:** List the tools actually used.
-- **How AI was used:** Describe the actual assistance received, such as explaining code, suggesting tests, or debugging errors.
-- **Problems encountered:** Record the issues you actually encountered.
-- **Debugging and verification:** Explain the code changes you personally reviewed, tested, and verified.
-- **Future improvements:** Identify the improvements you would prioritize based on the evaluator's feedback.
-
-Be prepared to explain the data validation rules, revenue calculation, SQL aggregations, intent classification, API endpoints, and test results.
  
 
 
